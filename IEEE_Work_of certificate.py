@@ -36,15 +36,15 @@ def split_pdf(input_pdf_path, output_dir, names_list):
 
 def main():
     # Define paths
-    input_pdf_path = r'C:\Users\dhany\Downloads\(Bulk 1) techBlitz (2).pdf'
-    excel_path = r'C:\Users\dhany\Downloads\Participants List.xlsx'
-    output_dir = r'C:\Users\dhany\Downloads\Participants_check'
+    input_pdf_path = r'Enter Your PDF Path'
+    excel_path = r'Enter Your Excel Path'
+    output_dir = r'Enter Your Designation Path'
 
     # Read the Excel file
     df = pd.read_excel(excel_path)
 
     # Assuming the Excel file has columns named 'FirstName' and 'LastName' with the desired PDF names
-    names_list = (df['Member Name'] + '_' + df['USN']).tolist()
+    names_list = (df[' Name'] + '_ ' + df['USN']).tolist()
 
     # Print number of names for debugging
     print(f"Number of names in Excel: {len(names_list)}")
